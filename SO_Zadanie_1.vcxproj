@@ -145,13 +145,17 @@
     <ClCompile Include="FCFS.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Process.cpp" />
+    <ClCompile Include="RR.cpp" />
     <ClCompile Include="SJF.cpp" />
+    <ClCompile Include="SJFw.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FCFS.h" />
     <ClInclude Include="header.h" />
     <ClInclude Include="Process.h" />
+    <ClInclude Include="RR.h" />
     <ClInclude Include="SJF.h" />
+    <ClInclude Include="SJFw.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

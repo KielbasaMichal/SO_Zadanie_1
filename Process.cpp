@@ -16,6 +16,8 @@ Process::Process(int id, int time)
 	Process::procTime = time;
 	Process::remainingTime = time;
 	Process::waitingTime = 0;
+	Process::startTime = 0;
+	Process::endTime = 0;
 }
 
 
@@ -30,7 +32,27 @@ void Process::doOnce()
 
 bool Process::isDone()
 {
-	return remainingTime <= 1;
+	return remainingTime < 1;
+}
+
+int Process::getStartTime()
+{
+	return startTime;
+}
+
+void Process::setStartTime(int startTime)
+{
+	Process::startTime = startTime;
+}
+
+int Process::getEndTime()
+{
+	return endTime;
+}
+
+void Process::setEndTime(int endTime)
+{
+	Process::endTime = endTime;
 }
 
 int Process::getID()

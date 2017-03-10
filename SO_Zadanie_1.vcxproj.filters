@@ -27,6 +27,12 @@
     <ClCompile Include="SJF.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SJFw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Process.h">
@@ -39,6 +45,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SJFw.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

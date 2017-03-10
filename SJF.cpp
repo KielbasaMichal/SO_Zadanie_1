@@ -31,11 +31,9 @@ void SJF::run()
 
 void SJF::statistic()
 {
-	int sumWaitingTime = 0;
-	std::cout << "Czas oczekiwania na wykonianie poszczegolnych zadan wynosily kolejno:\n";
+	double sumWaitingTime = 0;
 	for (int i = 0; i < list.size(); i++)
 	{
-		std::cout << list[i].getWaitingTime() << " ";
 		sumWaitingTime += list[i].getWaitingTime();
 	}
 	std::cout << std::endl << "Sredni czas oczekiwania wynosil: " << sumWaitingTime / list.size() << std::endl;

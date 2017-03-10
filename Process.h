@@ -8,6 +8,8 @@ private:
 	int procTime;
 	int remainingTime;
 	int waitingTime;
+	int startTime;
+	int endTime;
 
 public:
 	Process();
@@ -17,6 +19,10 @@ public:
 	void doOnce();
 	bool isDone();
 
+	int getStartTime();
+	void setStartTime(int startTime);
+	int getEndTime();
+	void setEndTime(int endTime);
 	int getID();
 	int getProcTime();
 	int getRemainingTime();
