@@ -4,7 +4,7 @@
 class FCFS
 {
 private:
-	std::vector <Process> list;
+	std::vector<Process> list;
 public:
 	FCFS(std::vector <Process> process);
 	~FCFS();
