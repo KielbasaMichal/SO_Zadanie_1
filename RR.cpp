@@ -39,7 +39,7 @@ void RR::run()
 void RR::statistic()
 {
 	double sumWaitingTime = 0;
-	for (int i = 0; i < finishList.size(); i++)
+	for (unsigned int i = 0; i < finishList.size(); i++)
 	{
 		sumWaitingTime += finishList[i].getWaitingTime();
 	}
@@ -49,7 +49,7 @@ void RR::statistic()
 void RR::processList()
 {
 	printf("%-20s %-20s %-20s\n", "ID", "Czas procesu", "Czas oczekiwania");
-	for (int i = 0; i < finishList.size(); i++)
+	for (unsigned int i = 0; i < finishList.size(); i++)
 	{
 		Process tmp = finishList.at(i);
 		printf("%-20d %-20d %-20d\n", tmp.getID(), tmp.getProcTime(), tmp.getWaitingTime());

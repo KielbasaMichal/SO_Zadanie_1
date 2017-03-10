@@ -1,4 +1,10 @@
 #include "header.h"
+#include "Process.h"
+#include "FCFS.h"
+#include "SJF.h"
+#include "SJFw.h"
+#include "RR.h" 
+#include "Generator.h"
 
 //https://www.ii.pwr.edu.pl/~juszczyszyn/so.htm
 
@@ -9,10 +15,12 @@ using namespace std;
 int main()
 {
 	std::vector<Process> data;
-	data.push_back(Process(0, 21));
+	data = Generator(50, 5, 100).getProcessList();
+	/*data.push_back(Process(0, 21));
 	data.push_back(Process(1, 6));
 	data.push_back(Process(2, 3));
-
+	*/
+	int kwantCzasu = 7;
 	int choose = 0;
 	while (choose != 5)
 	{
@@ -46,7 +54,7 @@ int main()
 		{
 			//Algorytm RR
 			cout << "Algorytm RR\n";
-			RR rr(data, 7);
+			RR rr(data, kwantCzasu);
 			rr.run();
 			rr.processList();
 			rr.statistic();
@@ -55,6 +63,8 @@ int main()
 		case 4:
 		{
 			//Konfiguracja TODO...
+			cout << "Aktualny kwant czasu wynosi: " << kwantCzasu << "Podaj nowa wartosc: ";
+			cin >> kwantCzasu;
 			break;
 		}
 		default:

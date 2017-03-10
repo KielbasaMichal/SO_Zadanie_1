@@ -12,7 +12,7 @@ FCFS::~FCFS()
 void FCFS::run()
 {
 	int time = 0;
-	for (int i = 0; i < list.size(); i++)
+	for (unsigned int i = 0; i < list.size(); i++)
 	{
 		//std::cout << "Wykonywanie procesu o ID: " << list[i] << std::endl;
 		while (!list[i].isDone())
@@ -28,7 +28,7 @@ void FCFS::run()
 void FCFS::statictic()
 {
 	double sumWaitingTime = 0;
-	for (int i = 0; i < list.size(); i++)
+	for (unsigned int i = 0; i < list.size(); i++)
 	{
 		sumWaitingTime += list[i].getWaitingTime();
 	}
@@ -38,7 +38,7 @@ void FCFS::statictic()
 void FCFS::processList()
 {
 	printf("%-20s %-20s %-20s\n", "ID", "Czas procesu", "Czas oczekiwania");
-	for (int i = 0; i < list.size(); i++)
+	for (unsigned int i = 0; i < list.size(); i++)
 	{
 		Process tmp = list.at(i);
 		printf("%-20d %-20d %-20d\n", tmp.getID(), tmp.getProcTime(), tmp.getWaitingTime());

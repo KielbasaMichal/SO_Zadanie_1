@@ -1,5 +1,6 @@
 #pragma once
 #include "header.h"
+#include "Process.h"
 
 class SJF
 {
