@@ -1,4 +1,3 @@
-#include <iostream>
 #include "header.h"
 
 //https://www.ii.pwr.edu.pl/~juszczyszyn/so.htm

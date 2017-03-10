@@ -1,8 +1,5 @@
 #pragma once
-#include <stdio.h>
-#include <iostream>
-#include <vector>
-#include "Process.h"
+#include "header.h"
 
 class FCFS
 {
