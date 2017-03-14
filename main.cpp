@@ -113,7 +113,8 @@ int main()
 				<< "\td. Wczytaj plik onebig.txt\n"
 				<< "\te. Wlasny...\n"
 				<< "\tf. Wroc\n"
-				<< "\n Twoj wybor:";
+				<< "=====================================\n"
+				<< "Twoj wybor:";
 			cin >> a;
 			switch (a)
 			{
@@ -156,7 +157,7 @@ void printMenu()
 		<< "2. Algorytm SJF\n"
 		<< "3. Algorytm SJF z wywlaszczeniem\n"
 		<< "4. Algorytm RR\n"
-		<< "5. Statystyki dla wszystkich procesow\n"
+		<< "5. Statystyki dla wszystkich algorytmow\n"
 		<< "6. Konfiguracja\n"
 		<< "7. Wyjscie\n"
 		<< "=========================\n"
