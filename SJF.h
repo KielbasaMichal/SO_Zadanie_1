@@ -5,7 +5,9 @@
 class SJF
 {
 private:
-	std::vector<Process> list;
+	std::priority_queue<Process> queue;
+	std::vector<Process> finishList;
+	std::vector<Process> waitList;
 public:
 	SJF(std::vector<Process> list);
 	~SJF();

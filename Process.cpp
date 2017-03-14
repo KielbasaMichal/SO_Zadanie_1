@@ -8,6 +8,8 @@ Process::Process()
 	procTime = 0;
 	remainingTime = 0;
 	waitingTime = 0;
+	startTime = 0;
+	endTime = 0;
 }
 
 Process::Process(int id, int time)
@@ -18,6 +20,16 @@ Process::Process(int id, int time)
 	Process::waitingTime = 0;
 	Process::startTime = 0;
 	Process::endTime = 0;
+}
+
+Process::Process(int id, int time, int timeStart)
+{
+	Process::id = id;
+	Process::procTime = time;
+	Process::remainingTime = time;
+	Process::waitingTime = 0;
+	Process::startTime = timeStart;
+	Process::endTime = timeStart;
 }
 
 
@@ -88,5 +100,10 @@ std::ostream & operator<<(std::ostream & os, const Process & dt)
 
 bool operator<(const Process a, const Process b)
 {
-	return a.procTime < b.procTime;
+	return a.procTime > b.procTime;
+}
+
+bool operator>(const Process a, const Process b)
+{
+	return a.procTime > b.procTime;
 }

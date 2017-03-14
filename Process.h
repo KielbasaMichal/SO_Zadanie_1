@@ -14,6 +14,7 @@ private:
 public:
 	Process();
 	Process(int id, int time);
+	Process(int id, int time, int timeStart);
 	~Process();
 	
 	void doOnce();
@@ -30,5 +31,6 @@ public:
 	void addWaitingTime(int time);
 	friend std::ostream& operator<<(std::ostream& os, const Process& dt);
 	friend bool operator<(const Process a, const Process b);
+	friend bool operator>(const Process a, const Process b);
 };
 

@@ -6,7 +6,9 @@
 class FCFS
 {
 private:
-	std::vector<Process> list;
+	std::queue<Process> queue;
+	std::vector<Process> finishList;
+	std::vector<Process> waitList;
 public:
 	FCFS(std::vector <Process> process);
 	~FCFS();
